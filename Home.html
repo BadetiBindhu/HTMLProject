@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dancing Divinities</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #F5F0E1;
+    }
+
+    nav {
+      background-color: #6D1F1F;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      height: 60px;
+      width: auto;
+    }
+
+    .sub-nav {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-items .nav-links {
+      text-decoration: none;
+      color: #F5F0E1;
+      font-size: 18px;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-items .nav-links::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #C49A6C;
+      transition: width 0.3s;
+    }
+
+    .nav-items .nav-links:hover {
+      color: #C49A6C;
+    }
+
+    .nav-items .nav-links:hover::after {
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .sub-nav {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+        width: 100%;
+      }
+
+      .nav-items .nav-links {
+        font-size: 16px;
+      }
+    }
+
+    /* states */
+    /* Base Styles */
+ul.sub-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+}
+
+.nav-items {
+  position: relative;
+}
+
+.nav-links {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Dropdown Menu Hidden by Default */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10; /* Ensures it's above other content */
+  width: 180px; /* Fixed width */
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  display: none; /* Hide by default */
+  max-height: 400px; /* Set height as needed */
+  overflow-y: auto; /* Add scrollbar if content overflows */
+}
+
+/* Show on Hover */
+.dropdown-state:hover .dropdown-menu {
+  display: block;
+}
+
+/* Individual Dropdown Item Styles */
+.dropdown-item {
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-link:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+    /* Footer section */
+    footer {
+      background-color: #ffffff;
+      border-top: 1px solid #ddd;
+      color: #333;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-about {
+      flex: 1 1 300px;
+      max-width: 300px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex: 3;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .footer-contact {
+      min-width: 200px;
+    }
+
+    .footer-contact p {
+      margin: 10px 0;
+    }
+
+    .footer-contact i {
+      margin-right: 8px;
+    }
+
+    .footer-bottom {
+      background-color: #f8476d;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom span {
+      font-weight: bold;
+    }
+
+    .social-icons i {
+      margin-left: 15px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="Images/logo.png" alt="Dancing Divinities Logo">
+    </div>
+    <ul class="sub-nav">
+      <li class="nav-items"><a href="" class="nav-links">Home</a></li>
+      <li class="nav-items"><a href="" class="nav-links">All Classes</a></li>
+      <li class="nav-items dropdown-state"><a href="" class="nav-links">States</a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item"><a href="" class="dropdown-link">Andhra Pradesh</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Arunachel Pradesh</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Assam</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Bihar</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Chhattisgarh</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Gao</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Gujarat</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Haryana</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Himachal Pradesh</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Jharkhand</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Karnataka</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Kerala</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Madhya Pradesh</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Maharashtra</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Manipur</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Meghalaya</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Mizoram</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Nagaland</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Odisha</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Punjab</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Rajasthan</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Sikkim</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Tamil Nadu</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Telangana</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Tripura</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Uttar Pradesh</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">Uttarakhand</a></li>
+          <li class="dropdown-item"><a href="" class="dropdown-link">West Bengal</a></li>
+        </ul>
+      </li>
+      <li class="nav-items"><a href="" class="nav-links">About Us</a></li>
+      <li class="nav-items"><a href="" class="nav-links">Contact</a></li>
+    </ul>
+  </nav>
+  <img src="https://varnam.my/wp-content/uploads/2021/12/Untitled-design-11-1.jpg" width="1580" height="800">
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <p>
+          NatyaSutra is an attempt to permanently preserve the rich art and
+          cultural heritage of India. Our dream is to provide 24/7 online access
+          to personalized lectures, tutorials, classes, and performances of all
+          Indian art and culture.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <ul>
+            <li>Home</li>
+            <li>Dance</li>
+            <li>Gurus</li>
+            <li>Classes</li>
+            <li>Programmes</li>
+            <li>Events</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Music</li>
+            <li>Culture</li>
+            <li>Nature</li>
+            <li>Picture Gallery</li>
+            <li>Video Gallery</li>
+            <li>Free Videos</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Gita Govinda</li>
+            <li>Latest News</li>
+            <li>Media</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>Sitemap</li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <p><i class="fa fa-envelope"></i> contact@natyasutra.com</p>
+          <p><i class="fa fa-phone"></i> +91 94464 06749</p>
+          <p><i class="fab fa-whatsapp"></i> +91 94464 06749</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© Ayursutra Pvt. Ltd All Rights Reserved. Developed & Maintained by <span>Invis Pvt. Ltd</span></p>
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-whatsapp"></i>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+
+</html>
