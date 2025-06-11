@@ -19,17 +19,27 @@
     }
 
     nav {
-      background-color: #6D1F1F;
-      padding: 20px 30px;
+      position:sticky;
+      top:0px;
+      left:0px;
+      background-color: rgba(240,248,255,0);
+      color:#FFD700;
+      padding: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+       width: 100%;
+       position:absolute;
+       z-index: 1;
     }
-
+    .logo{
+      display: flex;
+    }
     .logo img {
-      height: 60px;
-      width: auto;
+      
+      height: 100px;
+      width: 100px;
     }
 
     .sub-nav {
@@ -40,8 +50,9 @@
 
     .nav-items .nav-links {
       text-decoration: none;
-      color: #F5F0E1;
-      font-size: 18px;
+      color:#FFD700;
+      font-size: 24px;
+      font-weight: 600;
       position: relative;
       transition: color 0.3s;
     }
@@ -109,7 +120,7 @@ ul.sub-nav {
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 10px;
   z-index: 10; /* Ensures it's above other content */
   width: 180px; /* Fixed width */
   background-color: white;
@@ -141,12 +152,26 @@ ul.sub-nav {
 .dropdown-link:hover {
   background-color: #f0f0f0;
 }
+/* body */
+body, html {
+  height: 100%;
+  width: 100%;
+}
 
+.image-container {
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+}
 
-
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fill while maintaining aspect ratio */
+}
     /* Footer section */
     footer {
-      background-color: #ffffff;
+      background-color: #F3E5F5;
       border-top: 1px solid #ddd;
       color: #333;
     }
@@ -219,24 +244,27 @@ ul.sub-nav {
 
   <nav>
     <div class="logo">
-      <img src="Images/logo.png" alt="Dancing Divinities Logo">
+      <a href="index.html"><img src="Images/finallogo.jpeg" alt="Natyam Logo"></a>
+      <div style="margin-top: 10px;margin-left: 15px;line-height: 1.8;letter-spacing: 2px;"><h2>NATYAM</h2><p>Dance with your Soul</p></div>
     </div>
     <ul class="sub-nav">
-      <li class="nav-items"><a href="" class="nav-links">Home</a></li>
-      <li class="nav-items"><a href="" class="nav-links">All Classes</a></li>
+      <li class="nav-items"><a href="index.html" class="nav-links">Home</a></li>
+      <li class="nav-items"><a href="Bookings.html" class="nav-links">Booking</a></li>
+      <li class="nav-items"><a href="Gallery.html" class="nav-links">Gallery</a></li>
+      <li class="nav-items"><a href="Contact.html" class="nav-links">Contact</a></li>
       <li class="nav-items dropdown-state"><a href="" class="nav-links">States</a>
         <ul class="dropdown-menu">
-          <li class="dropdown-item"><a href="" class="dropdown-link">Andhra Pradesh</a></li>
-          <li class="dropdown-item"><a href="" class="dropdown-link">Arunachel Pradesh</a></li>
-          <li class="dropdown-item"><a href="" class="dropdown-link">Assam</a></li>
-          <li class="dropdown-item"><a href="" class="dropdown-link">Bihar</a></li>
-          <li class="dropdown-item"><a href="" class="dropdown-link">Chhattisgarh</a></li>
-          <li class="dropdown-item"><a href="" class="dropdown-link">Gao</a></li>
-          <li class="dropdown-item"><a href="" class="dropdown-link">Gujarat</a></li>
-          <li class="dropdown-item"><a href="" class="dropdown-link">Haryana</a></li>
-          <li class="dropdown-item"><a href="" class="dropdown-link">Himachal Pradesh</a></li>
-          <li class="dropdown-item"><a href="" class="dropdown-link">Jharkhand</a></li>
-          <li class="dropdown-item"><a href="" class="dropdown-link">Karnataka</a></li>
+          <li class="dropdown-item"><a href="States/AndhraPradesh.html" class="dropdown-link">Andhra Pradesh</a></li>
+          <li class="dropdown-item"><a href="States/ArunachelPradesh.html" class="dropdown-link">Arunachel Pradesh</a></li>
+          <li class="dropdown-item"><a href="States/Assam.html" class="dropdown-link">Assam</a></li>
+          <li class="dropdown-item"><a href="States/Bihar.html" class="dropdown-link">Bihar</a></li>
+          <li class="dropdown-item"><a href="States/Chhatisgarh.html" class="dropdown-link">Chhattisgarh</a></li>
+          <li class="dropdown-item"><a href="States/Gao.html" class="dropdown-link">Goa</a></li>
+          <li class="dropdown-item"><a href="States/Gujarat.html" class="dropdown-link">Gujarat</a></li>
+          <li class="dropdown-item"><a href="States/Harayana.html" class="dropdown-link">Haryana</a></li>
+          <li class="dropdown-item"><a href="States/HimachalPradesh.html" class="dropdown-link">Himachal Pradesh</a></li>
+          <li class="dropdown-item"><a href="States/Jharkhand.html" class="dropdown-link">Jharkhand</a></li>
+          <li class="dropdown-item"><a href="States/Karnataka.html" class="dropdown-link">Karnataka</a></li>
           <li class="dropdown-item"><a href="" class="dropdown-link">Kerala</a></li>
           <li class="dropdown-item"><a href="" class="dropdown-link">Madhya Pradesh</a></li>
           <li class="dropdown-item"><a href="" class="dropdown-link">Maharashtra</a></li>
@@ -256,27 +284,21 @@ ul.sub-nav {
           <li class="dropdown-item"><a href="" class="dropdown-link">West Bengal</a></li>
         </ul>
       </li>
-      <li class="nav-items"><a href="" class="nav-links">About Us</a></li>
-      <li class="nav-items"><a href="" class="nav-links">Contact</a></li>
+     
     </ul>
   </nav>
-  <img src="https://varnam.my/wp-content/uploads/2021/12/Untitled-design-11-1.jpg" width="1580" height="800">
-  <!DOCTYPE html>
-  <html lang="en">
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Footer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  </head>
-
+ <!-- <video autoplay muted width="1400">
+  <source src="Images/Dancefinal.mp4" type="video/mp4">
+ </video> -->
+ <div class="image-container">
+  <img src="Images/sunland.jpeg" alt="Responsive Image">
+</div>
 
   <footer>
     <div class="footer-container">
       <div class="footer-about">
         <p>
-          NatyaSutra is an attempt to permanently preserve the rich art and
+          Natyam is an attempt to permanently preserve the rich art and
           cultural heritage of India. Our dream is to provide 24/7 online access
           to personalized lectures, tutorials, classes, and performances of all
           Indian art and culture.
